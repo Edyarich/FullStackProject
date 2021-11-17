@@ -8,6 +8,9 @@ let calendar = [
         dateFrom: new Date(2021, 9, 18, 19, 0),
         dateTo: new Date(2021, 9, 18, 20, 30),
         name: "First Event",
+        description: "Take your game to the next level by learning how to analyze " +
+            "chess games more effectively. Please bring your games to the class! " +
+            "Taught by IM Dorsa Derakhshani",
         place: "Online",
     },
     {
@@ -15,6 +18,8 @@ let calendar = [
         dateFrom: new Date(2021, 9, 18, 19, 0),
         dateTo: new Date(2021, 9, 18, 20, 30),
         name: "Second Event",
+        description: "Learn all the rules and fundamentals of chess to start " +
+            "your chess journey. Taught by Nathaniel Powell",
         place: "Online",
     },
     {
@@ -22,6 +27,8 @@ let calendar = [
         dateFrom: new Date(2021, 9, 18, 19, 0),
         dateTo: new Date(2021, 9, 18, 20, 30),
         name: "Third Event",
+        description: "Learn the basic fundamentals of chess to start your " +
+            "chess journey. Taught by Alex Moellering",
         place: "Online",
     },
     {
@@ -29,6 +36,8 @@ let calendar = [
         dateFrom: new Date(2021, 9, 18, 19, 0),
         dateTo: new Date(2021, 9, 18, 20, 30),
         name: "Fourth Event",
+        description: "If you already know the rules of chess, learn " +
+            "the basic strategies from a grandmaster in this fun class.",
         place: "Online",
     },
 ];

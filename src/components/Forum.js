@@ -29,13 +29,21 @@ class Forum extends React.Component {
     render() {
         return <div className="posts_table">
             <h1 id="title"> Forum </h1>
+
             <div className="table_head">
                 <div className="status">Status</div>
                 <div className="subjects">Subjects</div>
                 <div className="replies">Replies/Views</div>
                 <div className="last_reply">Last Reply</div>
             </div>
+
             {forum.map(elem=><ForumTheme key={elem.id} item={elem} />)}
+
+            <div className="pagination">
+                Pages: <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+            </div>
         </div>;
     }
 }
