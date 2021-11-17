@@ -6,7 +6,7 @@
     margin-left: 7.5%;
 }
 
-.contact_info {
+.about_us .contact_info {
     position: relative;
     float: left;
     background-color: #E8BE8E;
@@ -14,23 +14,26 @@
     top: 5px;
     height: 480px;
     margin-left: 7.5%;
+    color: #432D1F;
 }
 
-.contact_info #title {
+.about_us .contact_info #title {
     text-align: center;
     margin-top: 15px;
     font-size: 28px;
     font-weight: 500;
 }
 
-.contact_info #text {
+.about_us .contact_info #text {
     font-family: 'Exo', sans-serif;
     margin-left: 15px;
     margin-right: 15px;
     font-size: 20px;
 }
 
-.contact_info #vk_logo, .contact_info #youtube_logo, .contact_info #inst_logo {
+.about_us .contact_info #vk_logo,
+.about_us .contact_info #youtube_logo,
+.about_us .contact_info #inst_logo {
     width: 25px;
     height: 25px;
     margin-left: 10px;

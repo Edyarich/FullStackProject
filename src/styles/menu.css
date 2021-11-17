@@ -75,6 +75,8 @@
 
 .login_button a {
     font-size: 24px;
+    text-decoration: none;
+    color: black;
     font-family: "Roboto Mono", monospace;
 }
 
