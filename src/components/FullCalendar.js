@@ -1,10 +1,20 @@
 import React from 'react'
+import Calendar from "./Calendar.js"
+import "../styles/components.css"
 
 
-class FullCalendar extends React.Component {
+class FullCalendar extends Calendar {
     render() {
         return <div>
-            <h1> FullCalendar </h1>
+            <div className="full_calendar">
+                {super.render(true)}
+            </div>
+
+            <div className="pagination">
+                Pages: <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+            </div>
         </div>
     }
 }

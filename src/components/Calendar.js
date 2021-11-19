@@ -1,6 +1,7 @@
 import CalendarEvent from "./CalendarEvent"
 import "../styles/home_page.css"
 import React from "react";
+import * as Magic from "../constants/magic"
 
 let calendar = [
     {
@@ -40,17 +41,42 @@ let calendar = [
             "the basic strategies from a grandmaster in this fun class.",
         place: "Online",
     },
+    {
+        id: 5,
+        dateFrom: new Date(2021, 9, 18, 19, 0),
+        dateTo: new Date(2021, 9, 18, 20, 30),
+        name: "Fifth Event",
+        description: "If you already know the rules of chess, learn " +
+            "the basic strategies from a grandmaster in this fun class.",
+        place: "Online",
+    },
+        {
+        id: 6,
+        dateFrom: new Date(2021, 9, 18, 19, 0),
+        dateTo: new Date(2021, 9, 18, 20, 30),
+        name: "Sixth Event",
+        description: "If you already know the rules of chess, learn " +
+            "the basic strategies from a grandmaster in this fun class.",
+        place: "Online",
+    },
 ];
 
-calendar = calendar.slice(-4);
-
 class Calendar extends React.Component {
-    render() {
-        return <div className="calendar">
+    render(verbose = false) {
+        if (verbose === false) {
+            calendar = calendar.slice(-Magic.calendarEventsAtHome);
+        }
+
+        const calendarWidth = {"width": verbose ? "100%" : "34%"};
+
+        return <div className="calendar" style={calendarWidth}>
             <h2 id="title"> Club Calendar</h2>
-            {calendar.map(elem=><CalendarEvent key={elem.id} item={elem} />)}
+            {calendar.map(elem=><CalendarEvent key={elem.id} dateFrom={elem.dateFrom}
+                                dateTo={elem.dateTo} name={elem.name} place={elem.place}
+                                description={elem.description} verbose={verbose}/>)}
         </div>;
     }
 }
+
 
 export default Calendar;

@@ -28,7 +28,7 @@ function Events() {
             </Route>
 
             <Route path={`${path}/event_calendar`}>
-                <FullCalendar />
+                <FullCalendar/>
             </Route>
 
             <Route path={`${path}/club_tournaments`}>
