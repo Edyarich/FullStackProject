@@ -1,0 +1,10 @@
+.full_calendar {
+    margin-left: 7.5%;
+    margin-top: 20px;
+    width: 85%;
+    height: 1100px;
+}
+
+.pagination {
+    padding-top: 20px;
+}

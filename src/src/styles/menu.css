@@ -1,0 +1,86 @@
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.menu a {
+    border: none;
+    border-radius: 10px;
+    background-color: #220E05;
+    color: white;
+    padding: 7px 14px;
+    transition: background 0.1s ease;
+    font-size: 24px;
+    font-family: "Roboto Mono", monospace;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #C35421;
+    cursor: default;
+}
+
+.menu {
+    width: 85%;
+    line-height: 55px;
+    background: #220E05 no-repeat center center;
+    background-size: cover;
+    position: relative;
+    top: 10px;
+    left: 7.5%;
+    overflow: hidden;
+    text-align: center;
+}
+
+#header {
+    float: left;
+    width: 370px;
+    margin-left: 8.5%;
+    text-align: center;
+}
+
+.header_left {
+    float: left;
+    width: 100px;
+}
+
+.header_left #great_knight {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.header_right {
+    float: right;
+    width: 270px;
+    font-family: "Roboto Mono", monospace;
+}
+
+.header_right #header_title {
+    font-weight: 500;
+    margin-bottom: 0;
+    font-family: inherit;
+}
+
+.header_right #header_subtitle {
+    margin-top: 0;
+    font-family: inherit;
+}
+
+.login_button {
+    float: right;
+    margin-right: 8.5%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.login_button a {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    font-family: "Roboto Mono", monospace;
+}
+
+.login_button a:hover {
+    text-decoration: underline;
+    cursor: default;
+}
