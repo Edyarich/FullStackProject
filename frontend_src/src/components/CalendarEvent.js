@@ -5,8 +5,8 @@ class CalendarEvent extends React.Component {
     render() {
         const timeOptionsHM = {hour: 'numeric', minute: 'numeric'};
         const timeOptionsDM = {day: 'numeric', month: 'numeric'};
-        const dateFrom = this.props.dateFrom;
-        const dateTo = this.props.dateTo;
+        const dateFrom = new Date(this.props.dateFrom);
+        const dateTo = new Date(this.props.dateTo);
 
         const Description = this.props.verbose ?
             <p id="description"> {this.props.description} </p> : <></>;

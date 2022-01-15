@@ -1,9 +1,13 @@
 import "../styles/about_us.css"
+import {createContact} from "../services/createContact"
+
 import vkLogo from "../images/vk_logo.png"
 import youtubeLogo from "../images/youtube_bw_logo.png"
 import instLogo from "../images/inst_bw_logo.png"
+
 import * as Info from '../constants/contactInfo'
 import * as Links from '../constants/links'
+
 import React from "react";
 
 
@@ -41,12 +45,20 @@ function AboutUs() {
 
         <div className="contact_form">
             <p id="title"> Contact Form </p>
-            <form id="add_form" method="post" autoComplete="on">
-                <input id="name_input" placeholder="Your Name" required/> <br/>
-                <input id="phone_input" placeholder="Phone Number" required/> <br/>
-                <input id="email_input" placeholder="Email Address" required/> <br/>
-                <textarea id="msg_input" form="add_form" placeholder="Comment"
-                          maxLength="200" required/> <br/>
+            <form id="add_form" autoComplete="off" onSubmit={e=>{
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                createContact(Object.fromEntries(formData));
+
+                for (let i = 0; i < 4; ++i) {
+                    e.target[i].value = "";
+                }
+            }}>
+                <input id="name_input" name="name" placeholder="Your Name" required/> <br/>
+                <input id="phone_input" name="phone_number" placeholder="Phone Number" required/> <br/>
+                <input id="email_input" name="email" placeholder="Email Address" required/> <br/>
+                <textarea id="msg_input" name="comment" form="add_form" placeholder="Comment"
+                          maxLength="500" required/> <br/>
                 <button id="form_button" form="add_form">Send</button>
             </form>
         </div>

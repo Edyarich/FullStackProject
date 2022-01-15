@@ -1,4 +1,4 @@
-import "./../styles/menu.css"
+import "../styles/menu.css"
 import logoImage from "../images/great_knight.jpg"
 import {Link} from 'react-router-dom'
 
@@ -21,7 +21,6 @@ function Menu() {
 
         <div className="menu">
             <Link to="/">Home</Link>
-            <Link to="/learn">Learn</Link>
             <Link to="/events">Events</Link>
             <Link to="/forum">Forum</Link>
             <Link to="/about_us">About us</Link>

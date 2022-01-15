@@ -1,9 +1,10 @@
 import CalendarEvent from "./CalendarEvent"
+import {getCalendarHead} from "../services/getCalendarHead"
 import "../styles/home_page.css"
-import React from "react";
-import * as Magic from "../constants/magic"
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux'
 
-let calendar = [
+/*let calendar = [
     {
         id: 1,
         dateFrom: new Date(2021, 9, 18, 19, 0),
@@ -50,7 +51,7 @@ let calendar = [
             "the basic strategies from a grandmaster in this fun class.",
         place: "Online",
     },
-        {
+    {
         id: 6,
         dateFrom: new Date(2021, 9, 18, 19, 0),
         dateTo: new Date(2021, 9, 18, 20, 30),
@@ -59,20 +60,27 @@ let calendar = [
             "the basic strategies from a grandmaster in this fun class.",
         place: "Online",
     },
-];
+];*/
 
 class Calendar extends React.Component {
-    render(verbose = false) {
-        if (verbose === false) {
-            calendar = calendar.slice(-Magic.calendarEventsAtHome);
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: [],
         }
+    }
 
+    componentDidMount() {
+        getCalendarHead().then(json => this.setState({data: json}));
+    }
+
+    render(verbose = false) {
         const calendarWidth = {"width": verbose ? "100%" : "34%"};
 
         return <div className="calendar" style={calendarWidth}>
             <h2 id="title"> Club Calendar</h2>
-            {calendar.map(elem=><CalendarEvent key={elem.id} dateFrom={elem.dateFrom}
-                                dateTo={elem.dateTo} name={elem.name} place={elem.place}
+            {this.state.data.map(elem=><CalendarEvent key={elem.id} dateFrom={elem.date_from}
+                                dateTo={elem.date_to} name={elem.name} place={elem.place}
                                 description={elem.description} verbose={verbose}/>)}
         </div>;
     }
