@@ -1,13 +1,16 @@
 # FullStackProject
-Ches Club Website
+*Description*: Ches Club Website
 
 ## Installation guide for Ubuntu 20.04
 
 ### Prerequisities
 **Memory:** 
-Anaconda - 3 Gb
-Conda environment: 1 Gb
-Node + npm + git repo: 1 Gb
+Anaconda - 3 Gb  
+Conda environment: 1 Gb  
+Node + npm + git repo: 1 Gb  
+
+**Programs:**
+Git
 
 ### Setting the environment
 0. Install conda from the [official cite](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
