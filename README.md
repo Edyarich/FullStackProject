@@ -29,3 +29,9 @@ Git
 2. `npm install`
 3. `npm start`
 
+### How to reinstall react
+1. sudo npm uninstall -g create-react-app
+2. sudo npm rm -g create-react-app
+3. sudo npm install
+4. sudo npm install -g create-react-app
+5. npx create-react-app my-app
